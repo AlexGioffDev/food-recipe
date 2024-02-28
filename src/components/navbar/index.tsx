@@ -20,24 +20,24 @@ export default function Navbar() {
           className="bg-white/75 p-3 px-8 rounded-full outline-none lg:w-96 text-[#A76D5E] border border-transparent focus:border-[#A76D5E] transition duration-200 "
         />
       </form>
-      <ul className="flex gap-5 ">
-        <li>
-          <NavLink
-            to={"/"}
-            className="text-[#413F45] hover:text-[#A76D5E] duration-300"
-          >
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to={"/favorites"}
-            className="text-[#413F45] hover:text-[#A76D5E] duration-300"
-          >
-            Favorites
-          </NavLink>
-        </li>
-      </ul>
+      {/* <ul className="flex gap-5 "> */}
+      {/*   <li> */}
+      {/*     <NavLink */}
+      {/*       to={"/"} */}
+      {/*       className="text-[#413F45] hover:text-[#A76D5E] duration-300" */}
+      {/*     > */}
+      {/*       Home */}
+      {/*     </NavLink> */}
+      {/*   </li> */}
+      {/*   <li> */}
+      {/*     <NavLink */}
+      {/*       to={"/favorites"} */}
+      {/*       className="text-[#413F45] hover:text-[#A76D5E] duration-300" */}
+      {/*     > */}
+      {/*       Favorites */}
+      {/*     </NavLink> */}
+      {/*   </li> */}
+      {/* </ul> */}
     </nav>
   );
 }

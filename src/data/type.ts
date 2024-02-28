@@ -8,8 +8,6 @@ export interface IValue {
   setRecipeDetailsData: React.Dispatch<
     React.SetStateAction<RecipeDetail | null | undefined>
   >;
-  handleAddToFavorite: (getCurrentItem: Recipe) => void;
-  favoritesList: Recipe[];
 }
 
 export interface RecipeSearchResult {
