@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { GlobalContext } from "../../context";
+import { Recipe } from "../../data/type";
 
 export default function Details() {
   const { id } = useParams();
@@ -43,19 +44,17 @@ export default function Details() {
         <h3 className="font-bold text-2xl truncate text-[#A76D5E]">
           {recipeDetailsData?.recipe?.title}
         </h3>
-        <div>
-          <button
-            onClick={() => handleAddToFavorite(recipeDetailsData!.recipe)}
-            className="p-3 px-8 rounded-lg text-sm uppercase font-medium bg-transparent border border-[#A76D5E] text-[#A76D5E] tracking-wider mt-3 inline-block shadow-md"
+        <div className="flex flex-col gap-4">
+          <p className="text-sm text-[#A76D5E] font-semibold">
+            {recipeDetailsData?.recipe?.cooking_time} min
+          </p>
+          <a
+            className="border border-[#A76D5E] w-[40%] flex items-center justify-center p-2 bg-transparent rounded-full text-lg uppercase font-bold text-[#A76D5E]"
+            href={recipeDetailsData?.recipe.source_url}
+            target="_blank"
           >
-            {favoritesList &&
-            favoritesList.length > 0 &&
-            favoritesList.findIndex(
-              (item) => item.id === recipeDetailsData?.recipe?.id,
-            ) !== -1
-              ? "Remove from favorites"
-              : "Add to favorites"}
-          </button>
+            Recipe Here
+          </a>
         </div>
         <div className="flex flex-col lg:col-start-1">
           <div className="overflow-x-auto">
