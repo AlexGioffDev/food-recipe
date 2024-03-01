@@ -1,16 +1,11 @@
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { GlobalContext } from "../../context";
-import { Recipe } from "../../data/type";
 
 export default function Details() {
   const { id } = useParams();
-  const {
-    recipeDetailsData,
-    setRecipeDetailsData,
-    handleAddToFavorite,
-    favoritesList,
-  } = useContext(GlobalContext)!;
+  const { recipeDetailsData, setRecipeDetailsData } =
+    useContext(GlobalContext)!;
 
   useEffect(() => {
     async function getRecipeDetails() {
